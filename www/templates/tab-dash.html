@@ -1,0 +1,21 @@
+<ion-view view-title="Números primos">
+  <ion-content class="padding">
+      <form ng-submit="calcularPrimos(maxPrimo)">
+        <div class="list">
+         <label class="item item-input">
+             <input type="text" placeholder="introduza um número" ng-model="maxPrimo" >
+         </label> 
+
+        </div>
+         <div class="padding">
+          <button type="submit" class="button button-block button-positive ">Calcular os primos até o nº{{maxPrimo}}</button>
+        </div>
+       </form>
+      <ion-list>
+          <ion-item ng-repeat="numero in numerosPrimos">
+              {{ numero}}
+          </ion-item>
+      </ion-list>
+   
+  </ion-content>
+</ion-view>
